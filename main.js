@@ -12,17 +12,23 @@ const nervouseRememberMess = ['be present, breath, connect with your surrounding
 const happyYouAre = ['capable and enough', 'a world changer', 'radiant', 'brilliant'];
 const sadYouAre = ['seen and loved', 'valuble and deserve respect', 'more beautiful than you know', 'worth listning to'];
 const excitedYouAre = ['exactly where you\'re meant to be', 'capable of anything you set your mind to', 'ready to concour the world', 'an insparation for those around you'];
-const nervouseYouAre = ['enough for whatever lays ahead', 'capable to step up', 'an overcommer', 'destined for greatness'];
+const nervouseYouAre = ['enough for whatever lays ahead', 'capable to concour your situation', 'an overcommer', 'destined for greatness'];
 
 
 const messageGen = (feeling) => {
     if (feeling == 'happy' || feeling == 'sad' || feeling == 'excited' || feeling == 'nervouse') {
         if (feeling == 'happy') {
             return `So you're feeling happy? Remember to ${happyRememberMess[randomNum()]}. You are ${happyYouAre[randomNum()]}.`;
+        } else if (feeling == 'sad') {
+            return `So you're feeling sad? Remember to ${sadRememberMess[randomNum()]}. You are ${sadYouAre[randomNum()]}.`;
+        } else if (feeling == 'excited') {
+            return `So you're feeling excited? Remember to ${excitedRememberMess[randomNum()]}. You are ${excitedYouAre[randomNum()]}.`;
+        } else if (feeling == 'nervouse') {
+            return `So you're feeling nervouse? Remember to ${nervouseRememberMess[randomNum()]}. You are ${nervouseYouAre[randomNum()]}.`;
         }
     } else {
         return 'Invalid feelings. Please refure to README.md for acceptable imputs.'
     }
 }
 
-console.log(messageGen('happy'));
+console.log(messageGen('sad'));
